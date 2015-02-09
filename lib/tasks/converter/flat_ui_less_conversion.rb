@@ -60,10 +60,6 @@ class Converter
             file = replace_ms_filters(file)
             if pro?
               file = replace_all file, /(?<=[.-])\$state/, '#{$state}'
-            else
-              # calc-color mixin only exists in Flat-UI free
-              file = replace_all file, /-(\$.+-color)/, '-#{\1}'
-              file = replace_all file, /#\{\$\$\{(.+)\}\}/, 'interpolate_variable($\1)'
             end
             file = replace_rules(file, '  .list-group-item-') { |rule| extract_nested_rule rule, 'a&' }
             file = replace_all file, /,\s*\.open \.dropdown-toggle& \{(.*?)\}/m,
