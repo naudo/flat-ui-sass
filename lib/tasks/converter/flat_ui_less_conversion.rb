@@ -1,3 +1,5 @@
+require_relative 'less_conversion'
+
 class Converter
   module FlatUILessConversion
     include Converter::LessConversion
