@@ -218,12 +218,12 @@ $legend-color:              inherit !default;
 //##
 
 $tagsinput-container-bg:                    $inverse !default;
-$tagsinput-container-border-color:          mix($inverse, $brand-primary, 90%); !default;
+$tagsinput-container-border-color:          mix($inverse, $brand-primary, 90%) !default;
 $tagsinput-container-border-radius:         $border-radius-large !default;
 
 $tagsinput-input-color:                     $brand-primary !default;
 
-$tagsinput-tag-bg:                          mix($inverse, $brand-primary, 90%); !default;
+$tagsinput-tag-bg:                          mix($inverse, $brand-primary, 90%) !default;
 $tagsinput-tag-color:                       mix($brand-primary, $inverse, 65%) !default;
 $tagsinput-tag-hover-bg:                    mix($brand-secondary, black, 85%) !default;
 $tagsinput-tag-hover-color:                 $inverse !default;
