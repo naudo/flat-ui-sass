@@ -692,6 +692,10 @@ $pre-scrollable-max-height:   340px !default;
 $pre-border-radius:           $border-radius-large !default;
 
 
+//** Horizontal forms & lists
+$component-offset-horizontal: 180px !default;
+
+
 // Type
 //
 //##
@@ -719,5 +723,3 @@ $dl-horizontal-offset:        $component-offset-horizontal !default;
 //** Hr border color
 $hr-border:                   mix($brand-primary, $inverse, 63%) !default;
 
-//** Horizontal forms & lists
-$component-offset-horizontal: 180px !default;
