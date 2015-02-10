@@ -62,9 +62,9 @@ class Converter
               file = replace_all file, /(?<=[.-])\$state/, '#{$state}'
             end
             file = replace_rules(file, '  .list-group-item-') { |rule| extract_nested_rule rule, 'a&' }
-            file = replace_all file, /,\s*\.open \.dropdown-toggle& \{(.*?)\}/m,
-                               " {\\1}\n  .open & { &.dropdown-toggle {\\1} }"
-            file = replace_all file, '$ratio, $ratio-y', '$scale-args'
+            #file = replace_all file, /,\s*\.open \.dropdown-toggle& \{(.*?)\}/m,
+            #                   " {\\1}\n  .open & { &.dropdown-toggle {\\1} }"
+            #file = replace_all file, '$ratio, $ratio-y', '$scale-args'
             file = convert_grid_mixins file
           when 'variables.less'
             file = insert_default_vars(file)
@@ -100,7 +100,7 @@ class Converter
           when 'modules/glyphicons.less'
             file = replace_vars(file)
             file = replace_escaping(file)
-            file = replace_all file, /\#\{(url\(.*?\))}/, '\1'
+            #file = replace_all file, /\#\{(url\(.*?\))}/, '\1'
             file = replace_rules(file, '@font-face') { |rule|
               rule = replace_all rule, /(\$icon-font(?:-\w+)+)/, '#{\1}'
               replace_asset_url rule, :font
@@ -119,16 +119,16 @@ class Converter
             end
           when 'modules/select.less'
             # Fix the include that the converter makes an extend
-            file = replace_all file, /@extend \.caret/, '@include caret'
+            #file = replace_all file, /@extend \.caret/, '@include caret'
           when 'modules/spinner.less'
             # Fix mixin regex not supporting non-variable arguments
             file.gsub! /@include spinner-variant\((?:\$?.+)\);/ do |match|
               match.gsub /; /, ', '
             end
           when 'modules/switch.less'
-            file = fix_flat_ui_image_assets file
+            #file = fix_flat_ui_image_assets file
           when 'modules/tile.less'
-            file = fix_flat_ui_image_assets file
+            #file = fix_flat_ui_image_assets file
           when 'modules/todo.less'
             file = fix_flat_ui_image_assets file
           when 'modules/thumbnails.less'
@@ -136,20 +136,20 @@ class Converter
           when 'modules/type.less'
             # Since .bg-primary has a color associated with it we need to divide it into
             # two selectors
-            file = replace_rules(file, '.bg-primary') do |rule|
-              parts = rule.split "\n"
-              selector = parts.index {|line| line =~ /\.bg-primary/}
-              mixin = parts.index {|line| line =~ /@include/}
-              parts.insert(mixin, "}\n#{parts[selector]}")
-              rule = parts.join "\n"
-            end
+            #file = replace_rules(file, '.bg-primary') do |rule|
+            #  parts = rule.split "\n"
+            #  selector = parts.index {|line| line =~ /\.bg-primary/}
+            #  mixin = parts.index {|line| line =~ /@include/}
+            #  parts.insert(mixin, "}\n#{parts[selector]}")
+            #  rule = parts.join "\n"
+            #end
             file = apply_mixin_parent_selector(file, '\.(text|bg)-(success|primary|info|warning|danger)')
           when 'modules/video.less'
             file = replace_rules(file, /\s*\.vjs(?:-(?:control|time))?(?!-\w+)/) do |rule|
               selector = get_selector(rule).scan(/\.vjs(?:-(?:control|time))?(?!-\w+)/).first
               convert_arbitrary_less_ampersand(rule, selector)
             end
-            file = fix_flat_ui_image_assets file
+            #file = fix_flat_ui_image_assets file
         end
 
         name    = name.sub(/\.less$/, '.scss')
@@ -240,13 +240,13 @@ class Converter
 
     def fix_relative_asset_url(rule, type)
       # Use a really naive pluralization
-      replace_all rule, /url\(['"]?\.\.\/#{type}s\/([a-zA-Z0-9\-\/\.\?#]+)['"]?\)/, "url(\"#{@output_dir}/\\1\")"
+      replace_all rule, /url\(['"]?\.\.\/#{type}\/([a-zA-Z0-9\-\/\.\?#]+)['"]?\)/, "url(\"#{@output_dir}/\\1\")"
     end
 
     def fix_flat_ui_image_assets(file)
-      file = replace_all file, /\#\{(url\(.*?\).*?)}/, '\1'
-      file = fix_relative_asset_url file, :image
-      file = replace_asset_url file, :image
+      #file = replace_all file, /\#\{(url\(.*?\).*?)}/, '\1'
+      file = fix_relative_asset_url file, :img
+      file = replace_asset_url file, :img
     end
 
     def cleanup_whitespace(file)
