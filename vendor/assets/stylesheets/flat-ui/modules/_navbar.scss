@@ -50,7 +50,7 @@
       margin-left: -21px;
 
       > li:first-child a {
-        @extend .border-left-radius($navbar-border-radius);
+        @include border-left-radius($navbar-border-radius);
       }
     }
     .navbar-nav.navbar-right:last-child {
@@ -247,7 +247,7 @@
 // our navbars.
 
 .navbar-input {
-  @extend .input-size($input-height-sm; 5px; 10px; $input-font-size-sm; $navbar-input-line-height);
+  @include input-size($input-height-sm, 5px, 10px, $input-font-size-sm, $navbar-input-line-height);
 }
 
 .navbar-form {
@@ -258,7 +258,7 @@
   padding-left: 19px;
 
   // Vertically center in expanded, horizontal navbar
-  @extend .navbar-vertical-align($input-height-sm);
+  @include navbar-vertical-align($input-height-sm);
 
   @media (max-width: $grid-float-breakpoint-max) {
     margin: 3px -21px;
@@ -329,7 +329,7 @@
 
 // Menu position and menu caret support for dropups via extra dropup class
 .navbar-fixed-bottom .navbar-nav > li > .dropdown-menu {
-  @extend .border-bottom-radius($border-radius-base);
+  @include border-bottom-radius($border-radius-base);
 }
 
 .navbar-nav > .open > .dropdown-toggle,
@@ -349,7 +349,7 @@
   margin-top: 0;
   margin-bottom: 0;
 
-  @extend .navbar-vertical-align(23px, $navbar-height-base);
+  @include navbar-vertical-align(23px, $navbar-height-base);
 
   @media (min-width: $grid-float-breakpoint) {
     margin-left: 21px;
@@ -555,7 +555,7 @@
   .navbar-form {
     .form-control {
       border-color: transparent;
-      @extend .placeholder($navbar-default-form-placeholder);
+      @include placeholder($navbar-default-form-placeholder);
 
       &:focus {
         border-color: $brand-secondary;
@@ -762,7 +762,7 @@
       color: $navbar-inverse-form-placeholder;
       border-color: transparent;
       background-color: $navbar-inverse-form-bg;
-      @extend .placeholder($navbar-inverse-form-placeholder);
+      @include placeholder($navbar-inverse-form-placeholder);
 
       &:focus {
         border-color: $brand-secondary;
@@ -770,7 +770,7 @@
       }
     }
     .btn {
-      @extend .button-variant($btn-default-color, $brand-secondary, $btn-primary-hover-bg, $btn-primary-active-bg);
+      @include button-variant($btn-default-color, $brand-secondary, $btn-primary-hover-bg, $btn-primary-active-bg);
     }
     .input-group-btn .btn {
       border-color: transparent;
@@ -805,7 +805,7 @@
   }
 
   .navbar-btn {
-    @extend .button-variant($btn-default-color, $brand-secondary, $btn-primary-hover-bg, $btn-primary-active-bg);
+    @include button-variant($btn-default-color, $brand-secondary, $btn-primary-hover-bg, $btn-primary-active-bg);
   }
 }
 
@@ -859,11 +859,11 @@
   }
 
   .navbar-form {
-    @extend .navbar-vertical-align($input-height-sm; $navbar-height-large);
+    @include navbar-vertical-align($input-height-sm, $navbar-height-large);
   }
 
   .navbar-text {
-    @extend .navbar-vertical-align(23px; $navbar-height-large);
+    @include navbar-vertical-align(23px, $navbar-height-large);
   }
 
   .navbar-btn {

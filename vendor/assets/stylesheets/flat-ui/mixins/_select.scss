@@ -35,7 +35,7 @@
 }
 
 @mixin select-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
-  @extend .button-size($padding-vertical; $padding-horizontal; $font-size; $line-height; $border-radius);
+  @include button-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius);
   padding-right: ($padding-horizontal * 2 + 9px);
 }
 

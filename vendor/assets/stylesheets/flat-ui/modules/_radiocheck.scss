@@ -25,7 +25,7 @@
     cursor: pointer;
 
     .icon-checked {
-      @extend .opacity(0);
+      @include opacity(0);
     }
   }
 }
@@ -93,7 +93,7 @@
 
     &:hover:not(.nohover):not(:disabled) + .icons {
       .icon-unchecked {
-        @extend .opacity(0);
+        @include opacity(0);
       }
       .icon-checked {
         opacity: 1;
@@ -105,7 +105,7 @@
       color: $brand-secondary;
 
       .icon-unchecked {
-        @extend .opacity(0);
+        @include opacity(0);
       }
       .icon-checked {
         opacity: 1;
@@ -123,7 +123,7 @@
         filter: none;
       }
       .icon-checked {
-        @extend .opacity(0);
+        @include opacity(0);
       }
     }
 
@@ -131,7 +131,7 @@
       color: mix($gray-light, white, 38%);
 
       .icon-unchecked {
-        @extend .opacity(0);
+        @include opacity(0);
       }
       .icon-checked {
         opacity: 1;
@@ -148,7 +148,7 @@
         filter: none;
       }
       .icon-checked {
-        @extend .opacity(0);
+        @include opacity(0);
       }
       &:before {
         content: "\2013";

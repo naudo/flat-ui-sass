@@ -45,7 +45,7 @@
 
   .vjs-control-bar {
     margin-top: 0;
-    @extend .border-bottom-radius(0);
+    @include border-bottom-radius(0);
   }
   .vjs-tech {
     background-color: $vplayer-fullscreen-bg;
@@ -70,7 +70,7 @@
   color: $vplayer-control-bar-color;
   background: $vplayer-control-bar-bg;
   margin-top: -1px;
-  @extend .border-bottom-radius($vplayer-border-radius);
+  @include border-bottom-radius($vplayer-border-radius);
   user-select: none;
 
   &.vjs-fade-out {
@@ -191,7 +191,7 @@
     }
     > div {
       &:after {
-        @extend .opacity(0);
+        @include opacity(0);
       }
       &:before {
         opacity: 1;
@@ -211,7 +211,7 @@
         filter: none;
       }
       &:before {
-        @extend .opacity(0);
+        @include opacity(0);
       }
     }
   }
@@ -264,7 +264,7 @@
     }
     &:before {
       content: "\e618";
-      @extend .opacity(0);
+      @include opacity(0);
     }
   }
 
@@ -272,7 +272,7 @@
   &.vjs-vol-0 {
     > div {
       &:after {
-        @extend .opacity(0);
+        @include opacity(0);
       }
       &:before {
         opacity: 1;
@@ -324,7 +324,7 @@
   left: -1px;
   position: absolute;
   top: 0;
-  @extend .border-right-radius(0);
+  @include border-right-radius(0);
 }
 
 .vjs-load-progress {

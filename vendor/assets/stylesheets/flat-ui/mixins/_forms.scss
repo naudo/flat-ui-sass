@@ -18,7 +18,7 @@
     color: $text-color;
     border-color: $border-color;
     box-shadow: none;
-    @extend .placeholder($text-color);
+    @include placeholder($text-color);
 
     &:focus {
       border-color: $border-color;
@@ -91,13 +91,13 @@
   .input-group-btn:first-child > .btn,
   .input-group-btn:first-child > .dropdown-toggle,
   .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle) {
-    @extend .border-right-radius(0);
+    @include border-right-radius(0);
   }
   .input-group .form-control:last-child,
   .input-group-addon:last-child,
   .input-group-btn:last-child > .btn,
   .input-group-btn:last-child > .dropdown-toggle,
   .input-group-btn:first-child > .btn:not(:first-child) {
-    @extend .border-left-radius(0);
+    @include border-left-radius(0);
   }
 }

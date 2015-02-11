@@ -35,17 +35,17 @@
 //
 // Pallet grid
 // --------------------------------------------------
-@extend .pallet-variant(#{turquoise}, #{green-sea});
-@extend .pallet-variant(#{emerald}, #{nephritis});
-@extend .pallet-variant(#{peter-river}, #{belize-hole});
-@extend .pallet-variant(#{amethyst}, #{wisteria});
-@extend .pallet-variant(#{wet-asphalt}, #{midnight-blue});
+@include pallet-variant(#{turquoise}, #{green-sea});
+@include pallet-variant(#{emerald}, #{nephritis});
+@include pallet-variant(#{peter-river}, #{belize-hole});
+@include pallet-variant(#{amethyst}, #{wisteria});
+@include pallet-variant(#{wet-asphalt}, #{midnight-blue});
 
-@extend .pallet-variant(#{sun-flower}, #{orange});
-@extend .pallet-variant(#{carrot}, #{pumpkin});
-@extend .pallet-variant(#{alizarin}, #{pomegranate});
-@extend .pallet-variant(#{clouds}, #{silver});
-@extend .pallet-variant(#{concrete}, #{asbestos});
+@include pallet-variant(#{sun-flower}, #{orange});
+@include pallet-variant(#{carrot}, #{pumpkin});
+@include pallet-variant(#{alizarin}, #{pomegranate});
+@include pallet-variant(#{clouds}, #{silver});
+@include pallet-variant(#{concrete}, #{asbestos});
 
 .palette-clouds {
   color: #bdc3c7;

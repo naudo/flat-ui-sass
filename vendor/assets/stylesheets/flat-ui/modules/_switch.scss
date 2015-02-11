@@ -57,7 +57,7 @@
       left: 0;
       margin: 0;
       z-index: 200;
-      @extend .opacity(0);
+      @include opacity(0);
     }
   }
 
@@ -68,27 +68,27 @@
     top: 0;
     left: 0;
     z-index: -1;
-    @extend .opacity(0);
+    @include opacity(0);
   }
 }
 
 // `On` handler
 .$switch-name-handle-on {
-  @extend .border-left-radius($switch-border-radius);
 
   .$switch-name-off & {
-    @extend .switch-handle-off-variant(default, $gray-light, mix($brand-primary, white, 63%));
-    @extend .switch-handle-off-variant(primary, $brand-primary, $brand-secondary);
-    @extend .switch-handle-off-variant(success, $brand-success, $inverse);
-    @extend .switch-handle-off-variant(warning, $brand-warning, $inverse);
-    @extend .switch-handle-off-variant(info, $brand-info, $inverse);
-    @extend .switch-handle-off-variant(danger, $brand-danger, $inverse);
+  @include border-left-radius($switch-border-radius);
+    @include switch-handle-off-variant(default, $gray-light, mix($brand-primary, white, 63%));
+    @include switch-handle-off-variant(primary, $brand-primary, $brand-secondary);
+    @include switch-handle-off-variant(success, $brand-success, $inverse);
+    @include switch-handle-off-variant(warning, $brand-warning, $inverse);
+    @include switch-handle-off-variant(info, $brand-info, $inverse);
+    @include switch-handle-off-variant(danger, $brand-danger, $inverse);
   }
 }
 
 // `Off` handler
 .$switch-name-handle-off {
-  @extend .border-right-radius($switch-border-radius);
+  @include border-right-radius($switch-border-radius);
 
   &:before {
     display: inline-block;
@@ -126,7 +126,7 @@
 // Switch `disabled` states
 .$switch-name-disabled,
 .$switch-name-readonly {
-  @extend .opacity(.5);
+  @include opacity(.5);
   cursor: default;
 
   > div > span,
@@ -145,27 +145,27 @@
 // --------------------------------------------------
 
 .$switch-name-default {
-  @extend .switch-variant($inverse, $gray-light, $gray-light, mix($brand-primary, white, 63%));
+  @include switch-variant($inverse, $gray-light, $gray-light, mix($brand-primary, white, 63%));
 }
 
 .$switch-name-primary {
-  @extend .switch-variant($brand-secondary, $brand-primary, $brand-primary, $brand-secondary);
+  @include switch-variant($brand-secondary, $brand-primary, $brand-primary, $brand-secondary);
 }
 
 .$switch-name-info {
-  @extend .switch-variant($inverse, $brand-info, $brand-info, $inverse);
+  @include switch-variant($inverse, $brand-info, $brand-info, $inverse);
 }
 
 .$switch-name-success {
-  @extend .switch-variant($inverse, $brand-success, $brand-success, $inverse);
+  @include switch-variant($inverse, $brand-success, $brand-success, $inverse);
 }
 
 .$switch-name-warning {
-  @extend .switch-variant($inverse, $brand-warning, $brand-warning, $inverse);
+  @include switch-variant($inverse, $brand-warning, $brand-warning, $inverse);
 }
 
 .$switch-name-danger {
-  @extend .switch-variant($inverse, $brand-danger, $brand-danger, $inverse);
+  @include switch-variant($inverse, $brand-danger, $brand-danger, $inverse);
 }
 
 
@@ -182,23 +182,23 @@
     }
     .$switch-name-handle-on {
       text-indent: -15px;
-      @extend .border-left-radius($border-radius-base);
+      @include border-left-radius($border-radius-base);
     }
     .$switch-name-handle-off {
       text-indent: 15px;
-      @extend .border-right-radius($border-radius-base);
+      @include border-right-radius($border-radius-base);
 
       &:before {
          border: none;
-        @extend .border-left-radius(0);
-        @extend .border-right-radius(($border-radius-base - 2));
+        @include border-left-radius(0);
+        @include border-right-radius(($border-radius-base - 2));
       }
     }
   }
   .$switch-name-off {
     .$switch-name-handle-off:before {
-      @extend .border-left-radius(($border-radius-base - 2));
-      @extend .border-right-radius(0);
+      @include border-left-radius(($border-radius-base - 2));
+      @include border-right-radius(0);
     }
   }
 }

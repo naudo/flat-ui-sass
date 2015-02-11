@@ -47,7 +47,7 @@
     box-shadow: none;
   }
   .select2-container-disabled & {
-    @extend .opacity($select-disabled-opacity);
+    @include opacity($select-disabled-opacity);
   }
 }
 
@@ -82,32 +82,32 @@
 
 // Alternate color variants
 .select-default {
-  @extend .select-variant($select-default-color, $select-default-bg, $select-default-hover-bg, $select-default-active-bg, $arrow-color: $inverse);
+  @include select-variant($select-default-color, $select-default-bg, $select-default-hover-bg, $select-default-active-bg, $arrow-color: $inverse);
 }
 .select-primary {
-  @extend .select-variant($select-default-color, $brand-secondary, $select-primary-hover-bg, $select-primary-active-bg, $arrow-color: $inverse);
+  @include select-variant($select-default-color, $brand-secondary, $select-primary-hover-bg, $select-primary-active-bg, $arrow-color: $inverse);
 }
 .select-info {
-  @extend .select-variant($select-default-color, $brand-info, $select-info-hover-bg, $select-info-active-bg, $arrow-color: $inverse);
+  @include select-variant($select-default-color, $brand-info, $select-info-hover-bg, $select-info-active-bg, $arrow-color: $inverse);
 }
 .select-danger {
-  @extend .select-variant($select-default-color, $brand-danger, $select-danger-hover-bg, $select-danger-active-bg, $arrow-color: $inverse);
+  @include select-variant($select-default-color, $brand-danger, $select-danger-hover-bg, $select-danger-active-bg, $arrow-color: $inverse);
 }
 .select-success {
-  @extend .select-variant($select-default-color, $brand-success, $select-success-hover-bg, $select-success-active-bg, $arrow-color: $inverse);
+  @include select-variant($select-default-color, $brand-success, $select-success-hover-bg, $select-success-active-bg, $arrow-color: $inverse);
 }
 .select-warning {
-  @extend .select-variant($select-default-color, $brand-warning, $select-warning-hover-bg, $select-warning-active-bg, $arrow-color: $inverse);
+  @include select-variant($select-default-color, $brand-warning, $select-warning-hover-bg, $select-warning-active-bg, $arrow-color: $inverse);
 }
 .select-inverse {
-  @extend .select-variant($select-default-color, $brand-primary, $select-inverse-hover-bg, $select-inverse-active-bg, $arrow-color: $inverse);
+  @include select-variant($select-default-color, $brand-primary, $select-inverse-hover-bg, $select-inverse-active-bg, $arrow-color: $inverse);
 }
 
 // Select sizes
 .select-hg {
   .select2-container & {
     > .select2-choice {
-      @extend .select-size(13px, 20px, $select-font-size-hg, $select-line-height-hg, $border-radius-large);
+      @include select-size(13px, 20px, $select-font-size-hg, $select-line-height-hg, $border-radius-large);
 
       .filter-option {
         left: 20px;
@@ -126,7 +126,7 @@
 .select-lg {
   .select2-container & {
     > .select2-choice {
-      @extend .select-size(10px, 19px, $select-font-size-lg, $select-line-height-lg, $border-radius-large);
+      @include select-size(10px, 19px, $select-font-size-lg, $select-line-height-lg, $border-radius-large);
 
       .filter-option {
         left: 18px;
@@ -138,7 +138,7 @@
 .select-sm {
   .select2-container & {
     > .select2-choice {
-      @extend .select-size(9px, 13px, $select-font-size-sm, $select-line-height-sm, $border-radius-base);
+      @include select-size(9px, 13px, $select-font-size-sm, $select-line-height-sm, $border-radius-base);
 
       .filter-option {
         left: 13px;
@@ -242,7 +242,7 @@
     bottom: 0;
     padding-right: 10px;
     z-index: 2;
-    @extend .opacity(0);
+    @include opacity(0);
     transition: opacity .25s linear;
 
     &:after {
@@ -280,25 +280,25 @@
 
 // Multiselect variants
 .multiselect-default {
-  @extend .multiple-select-variant($select-default-bg, $select-default-hover-bg, $select-default-bg);
+  @include multiple-select-variant($select-default-bg, $select-default-hover-bg, $select-default-bg);
 }
 .multiselect-primary {
-  @extend .multiple-select-variant($brand-secondary, $select-primary-hover-bg, $brand-secondary);
+  @include multiple-select-variant($brand-secondary, $select-primary-hover-bg, $brand-secondary);
 }
 .multiselect-info {
-  @extend .multiple-select-variant($brand-info, $select-info-hover-bg, $brand-info);
+  @include multiple-select-variant($brand-info, $select-info-hover-bg, $brand-info);
 }
 .multiselect-danger {
-  @extend .multiple-select-variant($brand-danger, $select-danger-hover-bg, $brand-danger);
+  @include multiple-select-variant($brand-danger, $select-danger-hover-bg, $brand-danger);
 }
 .multiselect-success {
-  @extend .multiple-select-variant($brand-success, $select-success-hover-bg, $brand-success);
+  @include multiple-select-variant($brand-success, $select-success-hover-bg, $brand-success);
 }
 .multiselect-warning {
-  @extend .multiple-select-variant($brand-warning, $select-warning-hover-bg, $brand-warning);
+  @include multiple-select-variant($brand-warning, $select-warning-hover-bg, $brand-warning);
 }
 .multiselect-inverse {
-  @extend .multiple-select-variant($brand-primary, $select-inverse-hover-bg, $brand-primary);
+  @include multiple-select-variant($brand-primary, $select-inverse-hover-bg, $brand-primary);
 }
 
 
@@ -344,10 +344,10 @@
     list-style: none;
 
     > li:first-child > .select2-result-label {
-      @extend .border-top-radius($select-dropdown-border-radius);
+      @include border-top-radius($select-dropdown-border-radius);
     }
     > li:last-child > .select2-result-label {
-      @extend .border-bottom-radius($select-dropdown-border-radius);
+      @include border-bottom-radius($select-dropdown-border-radius);
     }
   }
   .select2-result-sub {
@@ -356,7 +356,7 @@
     list-style: none;
 
     > li:last-child > .select2-result-label {
-      @extend .border-bottom-radius($select-dropdown-border-radius);
+      @include border-bottom-radius($select-dropdown-border-radius);
     }
   }
   // No results title
@@ -389,7 +389,7 @@
   .select2-disabled {
     cursor: default;
     color: $select-dropdown-disabled-item-color;
-    @extend .opacity($select-dropdown-disabled-item-opacity);
+    @include opacity($select-dropdown-disabled-item-opacity);
 
     &:focus,
     &:hover,
@@ -569,5 +569,5 @@
   z-index: 9998;
   /* styles required for IE to work */
   background-color: #fff;
-  @extend .opacity(0);
+  @include opacity(0);
 }

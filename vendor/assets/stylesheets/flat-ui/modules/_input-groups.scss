@@ -46,7 +46,7 @@
 }
 
 // Reset rounded corners
-@extend .form-controls-corners-reset;
+@include form-controls-corners-reset;
 
 
 
@@ -68,7 +68,7 @@
       color: $brand-secondary;
     }
     .btn-default {
-      @extend .button-variant($btn-default-color, $brand-secondary, $btn-primary-hover-bg, $btn-primary-active-bg);
+      @include button-variant($btn-default-color, $brand-secondary, $btn-primary-hover-bg, $btn-primary-active-bg);
     }
   }
 }
@@ -84,7 +84,7 @@
     height: 42px;
   }
   .btn-default {
-    @extend .button-variant($btn-default-color, $gray-light, $btn-hover-bg, $btn-active-bg);
+    @include button-variant($btn-default-color, $gray-light, $btn-hover-bg, $btn-active-bg);
   }
   .input-group-hg & .btn {
     line-height: 31px;
@@ -119,14 +119,14 @@
 .input-group-rounded {
   .input-group-btn + .form-control,
   .input-group-btn:last-child .btn {
-    @extend .border-right-radius(20px);
+    @include border-right-radius(20px);
 
 
 
   }
   .form-control:first-child,
   .input-group-btn:first-child .btn {
-    @extend .border-left-radius(20px);
+    @include border-left-radius(20px);
 
 
 
@@ -138,24 +138,24 @@
   &.input-group-hg {
     .input-group-btn + .form-control,
     .input-group-btn:last-child .btn {
-      @extend .border-right-radius(27px);
+      @include border-right-radius(27px);
     }
     
     .form-control:first-child,
     .input-group-btn:first-child .btn {
-      @extend .border-left-radius(27px);
+      @include border-left-radius(27px);
     }
     
   }
   &.input-group-lg {
     .input-group-btn + .form-control,
     .input-group-btn:last-child .btn {
-      @extend .border-right-radius(25px);
+      @include border-right-radius(25px);
     }
     
     .form-control:first-child,
     .input-group-btn:first-child .btn {
-      @extend .border-left-radius(25px);
+      @include border-left-radius(25px);
     }
     
   }

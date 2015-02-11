@@ -52,7 +52,7 @@ a {
   transition: all .25s ease-in-out;
 
   // Keep them at most 100% wide
-  @extend .img-responsive(inline-block);
+  @include img-responsive(inline-block);
 }
 
 // Description text under image

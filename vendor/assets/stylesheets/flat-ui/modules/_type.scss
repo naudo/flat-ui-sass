@@ -81,19 +81,19 @@ small,
   color: $inverse;
 }
 .text-primary {
-  @extend .text-emphasis-variant($brand-secondary);
+  @include text-emphasis-variant($brand-secondary);
 }
 .text-warning {
-  @extend .text-emphasis-variant($state-warning-text);
+  @include text-emphasis-variant($state-warning-text);
 }
 .text-danger {
-  @extend .text-emphasis-variant($state-danger-text);
+  @include text-emphasis-variant($state-danger-text);
 }
 .text-success {
-  @extend .text-emphasis-variant($state-success-text);
+  @include text-emphasis-variant($state-success-text);
 }
 .text-info {
-  @extend .text-emphasis-variant($state-info-text);
+  @include text-emphasis-variant($state-info-text);
 }
 
 // Contextual backgrounds
@@ -101,19 +101,19 @@ small,
   // Given the contrast here, this is the only class to have its color inverted
   // automatically.
   color: $inverse;
-  @extend .bg-variant($brand-primary);
+  @include bg-variant($brand-primary);
 }
 .bg-success {
-  @extend .bg-variant($state-success-bg);
+  @include bg-variant($state-success-bg);
 }
 .bg-info {
-  @extend .bg-variant($state-info-bg);
+  @include bg-variant($state-info-bg);
 }
 .bg-warning {
-  @extend .bg-variant($state-warning-bg);
+  @include bg-variant($state-warning-bg);
 }
 .bg-danger {
-  @extend .bg-variant($state-danger-bg);
+  @include bg-variant($state-danger-bg);
 }
 
 

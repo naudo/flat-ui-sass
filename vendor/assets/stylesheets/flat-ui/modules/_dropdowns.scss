@@ -29,7 +29,7 @@
 
   // Dividers (basically an hr) within the dropdown
   .divider {
-    @extend .nav-divider($dropdown-divider-bg);
+    @include nav-divider($dropdown-divider-bg);
   }
 
   // Links within the dropdown menu
@@ -40,10 +40,10 @@
   }
 
   > li:first-child > a:first-child {
-    @extend .border-top-radius($dropdown-border-radius);
+    @include border-top-radius($dropdown-border-radius);
   }
   > li:last-child > a:first-child {
-    @extend .border-bottom-radius($dropdown-border-radius);
+    @include border-bottom-radius($dropdown-border-radius);
   }
 
   // Typeahead (deprecated)
@@ -173,7 +173,7 @@
 
   // Dividers
   .divider {
-    @extend .nav-divider($dropdown-inverse-divider-bg);
+    @include nav-divider($dropdown-inverse-divider-bg);
   }
   // Links within the dropdown menu
   > li > a {
