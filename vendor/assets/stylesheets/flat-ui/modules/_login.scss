@@ -92,6 +92,7 @@ $form-color: mix($brand-primary, $inverse, 9%);
 // Retina support
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 2) {
   .login {
-    background-image: url(if($flat-ui-sass-asset-helper, flat-ui-img-path(if($flat-ui-sass-asset-helper, flat-ui-image-path(../img/login/imac-2x.png), if($flat-ui-sass-asset-helper, flat-ui-image-path(../img/login/imac-2x.png)), ../img/login/imac-2x.png));
+    //background-image: url(if($flat-ui-sass-asset-helper, flat-ui-img-path(if($flat-ui-sass-asset-helper, flat-ui-image-path(../img/login/imac-2x.png), if($flat-ui-sass-asset-helper, flat-ui-image-path(../img/login/imac-2x.png)), ../img/login/imac-2x.png));
+    background-image: url(if($flat-ui-sass-asset-helper, flat-ui-img-path("flat-ui/login/imac-2x.png"), "flat-ui/login/imac-2x.png"));
   }
 }
