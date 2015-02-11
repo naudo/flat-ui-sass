@@ -9,14 +9,14 @@
   &:focus,
   &:active,
   &.active,
-  .open > .dropdown-toggle& {
+  .open > .dropdown-toggle & {
     color: $color;
     background-color: $hover-background;
     border-color: $hover-background;
   }
   &:active,
   &.active,
-  .open > .dropdown-toggle& {
+  .open > .dropdown-toggle & {
     background: $active-background;
     border-color: $active-background;
   }

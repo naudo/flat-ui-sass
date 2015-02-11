@@ -2,7 +2,7 @@
 
 @mixin bg-variant($color) {
   background-color: $color;
-  a&:hover {
+  a &:hover {
     background-color: darken($color, 10%);
   }
 }

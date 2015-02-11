@@ -18,7 +18,7 @@
       background: $active-background;
       border-color: $active-background;
     }
-    .select2-container-disabled& {
+    .select2-container-disabled & {
       &,
       &:hover,
       &:focus,
@@ -40,7 +40,7 @@
 }
 
 @mixin multiple-select-variant($background, $hover-background, $border-color) {
-  .select2-container-multi& {
+  .select2-container-multi & {
       border-color: $border-color;
 
       .select2-search-choice {

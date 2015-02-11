@@ -105,7 +105,7 @@
 
 // Select sizes
 .select-hg {
-  .select2-container& {
+  .select2-container & {
     > .select2-choice {
       @extend .select-size(13px, 20px, $select-font-size-hg, $select-line-height-hg, $border-radius-large);
 
@@ -124,7 +124,7 @@
   }
 }
 .select-lg {
-  .select2-container& {
+  .select2-container & {
     > .select2-choice {
       @extend .select-size(10px, 19px, $select-font-size-lg, $select-line-height-lg, $border-radius-large);
 
@@ -136,7 +136,7 @@
   }
 }
 .select-sm {
-  .select2-container& {
+  .select2-container & {
     > .select2-choice {
       @extend .select-size(9px, 13px, $select-font-size-sm, $select-line-height-sm, $border-radius-base);
 
