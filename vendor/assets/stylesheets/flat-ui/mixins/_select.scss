@@ -1,7 +1,7 @@
 // Select variants
 //
 
-@mixin select-variant($color, $background, $hover-background, $active-background, $disabled-background: $gray-light, $arrow-color) {
+@mixin select-variant($color, $background, $hover-background, $active-background, $arrow-color, $disabled-background: $gray-light) {
   .select2-choice {
     color: $color;
     background-color: $background;
