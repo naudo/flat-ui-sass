@@ -192,7 +192,7 @@
   cursor: text;
   overflow: hidden;
   min-height: 26px;
-  @extend .clearfix all;
+  @extend .clearfix;
 
   li {
     float: left;
@@ -437,7 +437,7 @@
   display: none;
 
   input[type="text"] {
-    @extend .form-control all, .input-sm all;
+    @extend .form-control, .input-sm;
     width: 100%;
     height: auto !important;
   }
