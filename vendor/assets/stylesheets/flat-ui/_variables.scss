@@ -75,7 +75,7 @@ $font-family-demo:              "Helvetica Neue", Helvetica, Arial, sans-serif !
 $font-family-monospace:         Monaco, Menlo, Consolas, "Courier New", monospace !default;
 $font-size-base:                18px !default;
 
-$local-font-path:               "../fonts/lato/" !default;
+$local-font-path:               "flat-ui/fonts/lato/" !default;
 $local-font-name:               "lato-regular" !default;
 $local-font-svg-id:             "latoregular" !default;
 $local-font-name-light:         "lato-light" !default;
@@ -109,7 +109,7 @@ $headings-color:                inherit !default;
 //
 //## Specify custom locations of the include Flat UI icon font.
 
-$icon-font-path:                "flat-ui/" !default;
+$icon-font-path:                "flat-ui/glyphicons/" !default;
 $icon-font-name:                "flat-ui-icons-regular" !default;
 $icon-font-svg-id:              "flat-ui-icons-regular" !default;
 
