@@ -1,3 +1,5 @@
+# Use at your own risk, this fork will be force pushed to so may be broken at times.
+
 # Flat UI for Sass
 
 `flat-ui-sass` is a SASS port of Designmodo's [Flat-UI Free](http://designmodo.github.io/Flat-UI/). `flat-ui-sass`
